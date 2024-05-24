@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  database1:
+    image: postgres:15.3
+    container_name: owners
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=owners
+    ports:
+      - 5433:5432
+  database2:
+    image: postgres:15.3
+    container_name: users
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=users
+    ports:
+      - 5434:5432
+  database3:
+    image: postgres:15.3
+    container_name: cats
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=cats
+    ports:
+      - 5435:5432
